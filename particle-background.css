@@ -1,0 +1,74 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282c34;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+}
+
+.particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, #00c9ff, #92fe9d);
+      overflow: hidden;
+}
+
+.particles::before,
+.particles::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: particle-move 10s infinite ease-in-out;
+}
+
+.particles::before {
+      top: 10%;
+      left: 20%;
+}
+
+.particles::after {
+      bottom: 15%;
+      right: 25%;
+}
+
+@keyframes particle-move {
+
+      0%,
+      100% {
+            transform: translate(0, 0);
+      }
+
+      50% {
+            transform: translate(80px, -120px);
+      }
+}
+
+.content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+}
+
+.content h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+}
+
+.content p {
+      font-size: 20px;
+      opacity: 0.8;
+}
